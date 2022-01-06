@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "fa829ef2-c1a4-4d1e-8ec4-34a179452f92",
+		"name": "Bricolage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Offre",
+			"item": [
+				{
+					"name": "ajouterOffre",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n {\r\n    \"id_user\":\"7\",\r\n\t\"jobName\":\"hhhhh\",\r\n\t\"contents\":\"contents\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/offre/ajouterOffre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"offre",
+								"ajouterOffre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifierOffre",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 16,\r\n    \"user\": {\r\n        \"id\": 7,\r\n        \"firstName\": \"zohair\",\r\n        \"lastName\": \"moufakkir\",\r\n        \"phone\": \"063738883993\",\r\n        \"email\": \"email\",\r\n        \"password\": \"password\",\r\n        \"city\": \"city\"\r\n    },\r\n    \"jobName\": \"hhhhh\",\r\n    \"contents\": \"contentsUpdated2\",\r\n    \"date\": \"2021-12-25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/offre/modifierOffre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"offre",
+								"modifierOffre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "supprimerOffre",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/offre/supprimerOffre/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"offre",
+								"supprimerOffre",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listOffrePourBricoleur",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/offre/listOffrePourBricoleur/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"offre",
+								"listOffrePourBricoleur",
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listOffrePourUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/offre/listOffrePourUser/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"offre",
+								"listOffrePourUser",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Compte",
+			"item": [
+				{
+					"name": "ajouterBricolage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n    \"firstName\":\"zohair\",\r\n\t\"lastName\":\"moufakkir\",\r\n\t\"phone\":\"063738883993\",\r\n    \"email\":\"email\",\r\n\t\"password\":\"password\",\r\n\t\"city\":\"city\",\r\n    \"adress\":\"adress\",\r\n\t \"job\":\"job\"\r\n    }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/compte/ajouterBricoleur",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"compte",
+								"ajouterBricoleur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ajouterUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n    \"firstName\":\"zohair\",\r\n\t\"lastName\":\"moufakkir\",\r\n\t\"phone\":\"063738883993\",\r\n    \"email\":\"email\",\r\n\t\"password\":\"password\",\r\n\t\"city\":\"city\"\r\n    }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/compte/ajouterUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"compte",
+								"ajouterUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifierBricoleur",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n    \"id\":\"3\",\r\n    \"firstName\":\"hasni\",\r\n\t\"lastName\":\"moufakkir\",\r\n\t\"phone\":\"063738883993\",\r\n    \"email\":\"email\",\r\n\t\"password\":\"password\",\r\n\t\"city\":\"city\",\r\n    \"adress\":\"adress\",\r\n\t \"job\":\"job\"\r\n    }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/compte/modifierBricoleur",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"compte",
+								"modifierBricoleur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifierUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"firstName\": \"userUpdated\",\r\n    \"lastName\": \"moufakkir\",\r\n    \"phone\": \"063738883993\",\r\n    \"email\": \"email\",\r\n    \"password\": \"password\",\r\n    \"city\": \"city\",\r\n    \"offres\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/compte/modifierUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"compte",
+								"modifierUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "supprimerCompte",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/compte/supprimerCompte/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"compte",
+								"supprimerCompte",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Avis",
+			"item": [
+				{
+					"name": "ajouterAvis",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n         \"id_user\":\"7\",\r\n\t\r\n\t     \"id_bricoleur\":\"6\",\r\n\t\r\n\t     \"avis\":\"avis\"\r\n    }\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/avis/ajouterAvis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"avis",
+								"ajouterAvis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifierAvis",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/avis/modifierAvis?id_avis=2&avis=avisUpdated",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"avis",
+								"modifierAvis"
+							],
+							"query": [
+								{
+									"key": "id_avis",
+									"value": "2"
+								},
+								{
+									"key": "avis",
+									"value": "avisUpdated"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listeAvisPourBricoleur",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Postule",
+			"item": [
+				{
+					"name": "ajouterPostule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"id_offre\":\"14\",\r\n\t\"id_bricoleur\":\"6\",\r\n\t\"postuleMessage\":\"ajouterPostule\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/bricolage/postule/ajouterPostule",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"bricolage",
+								"postule",
+								"ajouterPostule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "supprimerPostule",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
