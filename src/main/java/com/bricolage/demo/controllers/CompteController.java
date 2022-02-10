@@ -21,6 +21,7 @@ public class CompteController {
 	@PostMapping("/ajouterBricoleur")
 	public ResponseEntity<Bricoleur> ajouterBricoleur(@RequestBody Bricoleur bricoleur) {
 		Bricoleur bricoleurCreated = compteDao.ajouterBricoleur(bricoleur);
+		bricoleurCreated.setRate(0);
 		return new ResponseEntity<Bricoleur>(bricoleurCreated,HttpStatus.CREATED);
 	}
 	
