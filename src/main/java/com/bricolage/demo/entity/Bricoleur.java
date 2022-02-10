@@ -19,6 +19,8 @@ public class Bricoleur extends Compte implements Serializable {
 	
 	@OneToMany(mappedBy = "bricoleur" , cascade = CascadeType.REMOVE)
 	private List<Postule> postules;
+	
+	private int rate = 0;
 
 	public Bricoleur() {
 		super();
@@ -26,6 +28,7 @@ public class Bricoleur extends Compte implements Serializable {
 	
 	public Bricoleur(String firstName, String lastName, String phone, String email, String password, String city) {
 		super(firstName, lastName, phone, email, password, city);
+		//this.rate = 0;
 	}
 
 	public String getAdress() {
@@ -42,6 +45,14 @@ public class Bricoleur extends Compte implements Serializable {
 
 	public void setJob(String job) {
 		this.job = job;
+	}
+
+	public int getRate() {
+		return rate;
+	}
+
+	public void setRate(int rate) {
+		this.rate = rate;
 	}
 
 	@JsonIgnore

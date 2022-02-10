@@ -28,6 +28,12 @@ public class CompteController {
 		return new ResponseEntity<Bricoleur>(bricoleurUpdated,HttpStatus.ACCEPTED);
 	}
 	
+	@PutMapping("/rateBricoleur")
+	public ResponseEntity<Bricoleur> addRate(@RequestParam Long id_bricoleur , @RequestParam int rate) {
+		Bricoleur b = compteDao.RateBricoleur(id_bricoleur, rate);
+		return new ResponseEntity<Bricoleur>(b,HttpStatus.ACCEPTED);
+	}
+	
 	@PostMapping("/ajouterUser")
 	public ResponseEntity<User> ajouterUser(@RequestBody User user) {
 		User userCreated = compteDao.ajouterUser(user);

@@ -8,6 +8,8 @@ public class AvisRequest {
 	private Long id_bricoleur;
 	
 	private String avis;
+	
+	//private int rate;
 
 	public AvisRequest() {
 		super();
@@ -19,6 +21,7 @@ public class AvisRequest {
 		this.id_user = id_user;
 		this.id_bricoleur = id_bricoleur;
 		this.avis = avis;
+		//this.rate = rate;
 	}
 
 	public Long getId_user() {
@@ -28,6 +31,7 @@ public class AvisRequest {
 	public void setId_user(Long id_user) {
 		this.id_user = id_user;
 	}
+
 
 	public Long getId_bricoleur() {
 		return id_bricoleur;

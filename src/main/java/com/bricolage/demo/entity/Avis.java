@@ -29,6 +29,7 @@ public class Avis {
 	
 	private String avis;
 	private LocalDate Date;
+	//private int rate;
 	
 	public Avis() {
 		super();
@@ -41,6 +42,7 @@ public class Avis {
 		this.bricoleur = bricoleur;
 		this.avis = avis;
 		Date = date;
+		//this.rate = rate;
 	}
 	
 	public User getUser() {
@@ -60,6 +62,7 @@ public class Avis {
 	public String getAvis() {
 		return avis;
 	}
+
 	public void setAvis(String avis) {
 		this.avis = avis;
 	}
