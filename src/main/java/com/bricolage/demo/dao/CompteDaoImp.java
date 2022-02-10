@@ -28,6 +28,7 @@ public class CompteDaoImp implements CompteDao {
 	@Override
 	public Bricoleur ajouterBricoleur(Bricoleur bricoleur) {
 		// TODO Auto-generated method stub
+		bricoleur.setRate(0);
 		return bricoRepo.save(bricoleur);
 	}
 
@@ -60,8 +61,8 @@ public class CompteDaoImp implements CompteDao {
 		// TODO Auto-generated method stub
 		Bricoleur b = bricoRepo.findById(id_bricoleur).orElse(null);
 		   int cur_rate = b.getRate();
-		   if(cur_rate == 0) b.setRate(Rate);
-		   else b.setRate((cur_rate + Rate)/2);
+		   if(cur_rate == 0) { b.setRate(Rate);}
+		   else {b.setRate((cur_rate + Rate)/2);}
 		   return b;
 			}
 
