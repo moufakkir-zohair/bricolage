@@ -60,7 +60,8 @@ public class CompteDaoImp implements CompteDao {
 		// TODO Auto-generated method stub
 		Bricoleur b = bricoRepo.findById(id_bricoleur).orElse(null);
 		   int cur_rate = b.getRate();
-		   b.setRate((cur_rate + Rate)/2);
+		   if(cur_rate == 0) b.setRate(Rate);
+		   else b.setRate((cur_rate + Rate)/2);
 		   return b;
 			}
 
