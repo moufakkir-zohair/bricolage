@@ -64,27 +64,12 @@ public class CompteDaoImp implements CompteDao {
 		   return b;
 			}
 
-	@SuppressWarnings("null")
 	@Override
 	public List<Bricoleur> ListMeilBricoleurs(String job) {
 		// TODO Auto-generated method stub
-		List<Bricoleur> b = bricoRepo.findAll();
-		List<Bricoleur> br = null ;
-		for(Bricoleur brc : b) {
-			if(brc.getJob().equals(job)) {
-				br.add(brc);
-			}
-		}
-		if(br.size() <= 10) {
-			return br;
-		}else {
-			List<Bricoleur> mb = null;
-			for(Bricoleur bc : br) {
-				
-			}
-			return null;
-		}
-		//return b;
+		List<Bricoleur> b = bricoRepo.getMlBric(job);
+		
+		return b;
 	}
 
 }

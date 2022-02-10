@@ -1,5 +1,7 @@
 package com.bricolage.demo.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +34,12 @@ public class CompteController {
 	public ResponseEntity<Bricoleur> addRate(@RequestParam Long id_bricoleur , @RequestParam int rate) {
 		Bricoleur b = compteDao.RateBricoleur(id_bricoleur, rate);
 		return new ResponseEntity<Bricoleur>(b,HttpStatus.ACCEPTED);
+	}
+	
+	@GetMapping("/BestBric/{job}")
+	public ResponseEntity<List<Bricoleur>> listBestBricoleur(@PathVariable("job") String job){
+		List<Bricoleur> b = compteDao.ListMeilBricoleurs(job);
+		return new ResponseEntity<List<Bricoleur>>(b , HttpStatus.OK);
 	}
 	
 	@PostMapping("/ajouterUser")
