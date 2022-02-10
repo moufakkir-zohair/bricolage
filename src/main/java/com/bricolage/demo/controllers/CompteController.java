@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import com.bricolage.demo.dao.CompteDao;
 import com.bricolage.demo.entity.*;
 
-
 @RestController
 @RequestMapping("v1/api/bricolage/compte")
 public class CompteController {
@@ -58,6 +57,18 @@ public class CompteController {
 	public ResponseEntity<?> supprimerCompte(@PathVariable("id") Long id) {
 		compteDao.supprimerCompte(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+	
+	@GetMapping("/verifier")
+	public ResponseEntity<Compte> VerifierCompte(@RequestParam String email , @RequestParam  String MDP){
+	    //System.out.println("ANA HNA 2");
+		Compte C = compteDao.VerifierCompte(email, MDP);
+	    //System.out.println("ANA HNA 3");
+	    //int type_compte = 0;
+	    //if(C==null) type_compte= -1;
+	    //else if(C instanceof Bricoleur) (Bricoleur) C;
+	    //else if(C instanceof User) type_compte=2;
+		return new ResponseEntity<>(C,HttpStatus.OK);
 	}
 	
 }

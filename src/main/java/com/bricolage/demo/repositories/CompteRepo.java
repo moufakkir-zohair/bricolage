@@ -8,4 +8,6 @@ import com.bricolage.demo.entity.Compte;
 @Repository
 public interface CompteRepo extends JpaRepository<Compte, Long> {
 
+	Compte findByEmailAndPassword(String email, String motpasse);
+
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bricolage.demo.entity.Bricoleur;
+import com.bricolage.demo.entity.Compte;
 import com.bricolage.demo.entity.User;
 import com.bricolage.demo.repositories.BricoleurRepository;
 import com.bricolage.demo.repositories.CompteRepo;
@@ -73,6 +74,12 @@ public class CompteDaoImp implements CompteDao {
 		List<Bricoleur> b = bricoRepo.getMlBric(job);
 		
 		return b;
+	}
+
+	@Override
+	public Compte VerifierCompte(String email, String motpasse) {
+		// TODO Auto-generated method stub
+		return compteRepo.findByEmailAndPassword(email, motpasse);
 	}
 
 }

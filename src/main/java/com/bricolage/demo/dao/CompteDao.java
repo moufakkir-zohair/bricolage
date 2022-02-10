@@ -5,6 +5,7 @@ import java.util.List;
 import com.bricolage.demo.entity.Bricoleur;
 import com.bricolage.demo.entity.User;
 
+
 public interface CompteDao {
 	public Bricoleur ajouterBricoleur(Bricoleur bricoleur);
 	public Bricoleur modifierBricoleur(Bricoleur bricoleur);
@@ -13,4 +14,6 @@ public interface CompteDao {
 	public void supprimerCompte(Long id);
 	public Bricoleur RateBricoleur(Long id_bricoleur, int Rate);
 	public List<Bricoleur> ListMeilBricoleurs(String job);
+	public com.bricolage.demo.entity.Compte VerifierCompte(String email, String motpasse);
+
 }
