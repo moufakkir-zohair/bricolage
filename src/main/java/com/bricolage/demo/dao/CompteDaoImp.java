@@ -63,6 +63,7 @@ public class CompteDaoImp implements CompteDao {
 		   int cur_rate = b.getRate();
 		   if(cur_rate == 0) { b.setRate(Rate);}
 		   else {b.setRate((cur_rate + Rate)/2);}
+		   bricoRepo.save(b);
 		   return b;
 			}
 
