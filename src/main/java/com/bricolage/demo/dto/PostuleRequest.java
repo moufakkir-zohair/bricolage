@@ -4,18 +4,18 @@ package com.bricolage.demo.dto;
 public class PostuleRequest {
 	private Long id_offre;
 	private Long id_bricoleur;
-	private String postuleMessage;
+	//private String postuleMessage;
 	
 	public PostuleRequest() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public PostuleRequest(Long id_offre, Long id_bricoleur, String postuleMessage) {
+	public PostuleRequest(Long id_offre, Long id_bricoleur) {
 		super();
 		this.id_offre = id_offre;
 		this.id_bricoleur = id_bricoleur;
-		this.postuleMessage = postuleMessage;
+		//this.postuleMessage = postuleMessage;
 	}
 	
 	public Long getId_offre() {
@@ -34,13 +34,13 @@ public class PostuleRequest {
 		this.id_bricoleur = id_bricoleur;
 	}
 	
-	public String getPostuleMessage() {
+	/*public String getPostuleMessage() {
 		return postuleMessage;
 	}
 	
 	public void setPostuleMessage(String postuleMessage) {
 		this.postuleMessage = postuleMessage;
-	}
+	}*/
 
 	
 }
