@@ -28,7 +28,7 @@ public class PostuleDaoImp implements PostuleDao {
 	public Postule ajouterPostule(PostuleRequest postuleRequest) {
 		Offre offre = offreRepo.findById(postuleRequest.getId_offre()).orElse(null);
 		Bricoleur bricoleur = bricoleurRepository.findById(postuleRequest.getId_bricoleur()).orElse(null);
-		Postule postule = new Postule(offre, bricoleur, postuleRequest.getPostuleMessage(), false);
+		Postule postule = new Postule(offre, bricoleur, false);
 		return postuleRepo.save(postule);
 	}
 
@@ -42,6 +42,13 @@ public class PostuleDaoImp implements PostuleDao {
 		Offre offre = offreRepo.findById(id_offre).orElse(null);
 		return offre.getPostule();
 		
+	}
+
+	@Override
+	public List<Bricoleur> listPostuleBPourOffre(Long id_offre) {
+		// TODO Auto-generated method stub
+		Offre offre = offreRepo.findById(id_offre).orElse(null);
+		return null;
 	}
 
 	

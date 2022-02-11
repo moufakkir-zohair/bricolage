@@ -19,7 +19,7 @@ public class Postule {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_bricoleur")
 	private Bricoleur bricoleur;
-	private String postuleMessage;
+	//private String postuleMessage;
 	private Boolean accepte = false;
 	
 	public Postule() {
@@ -27,11 +27,11 @@ public class Postule {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Postule(Offre offre, Bricoleur bricoleur, String postuleMessage, Boolean accepte) {
+	public Postule(Offre offre, Bricoleur bricoleur, Boolean accepte) {
 		super();
 		this.offre = offre;
 		this.bricoleur = bricoleur;
-		this.postuleMessage = postuleMessage;
+		//this.postuleMessage = postuleMessage;
 		this.accepte = accepte;
 	}
 	
@@ -50,12 +50,12 @@ public class Postule {
 	public void setBricoleur(Bricoleur bricoleur) {
 		this.bricoleur = bricoleur;
 	}
-	public String getPostuleMessage() {
+	/*public String getPostuleMessage() {
 		return postuleMessage;
 	}
 	public void setPostuleMessage(String postuleMessage) {
 		this.postuleMessage = postuleMessage;
-	}
+	}*/
 	public Boolean getAccepte() {
 		return accepte;
 	}
