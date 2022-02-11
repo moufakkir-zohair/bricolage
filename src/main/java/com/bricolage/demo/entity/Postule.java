@@ -21,7 +21,7 @@ public class Postule {
 	private Bricoleur bricoleur;
 	//private String postuleMessage;
 	private Boolean accepte = false;
-	
+
 	public Postule() {
 		super();
 		// TODO Auto-generated constructor stub

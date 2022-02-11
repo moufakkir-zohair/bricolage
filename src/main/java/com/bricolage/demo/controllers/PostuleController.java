@@ -40,7 +40,7 @@ public class PostuleController {
 	}
 	
 	
-	@GetMapping("/listBricoleurPourOffre/{id}")
+	@GetMapping("/listBricoleursPourOffre/{id}")
 	public ResponseEntity<List<Bricoleur>> listBricoleurPostuleOffre(@PathVariable("id")  Long id_offre){
 		List<Bricoleur> bricoleurs = postuleDao.listBricoleurPostuleOffre(id_offre);
 		return new ResponseEntity<List<Bricoleur>>(bricoleurs, HttpStatus.OK);

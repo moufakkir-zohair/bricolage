@@ -26,6 +26,7 @@ public class Bricoleur extends Compte implements Serializable {
 		super();
 	}
 	
+	
 	public Bricoleur(String firstName, String lastName, String phone, String email, String password, String city) {
 		super(firstName, lastName, phone, email, password, city);
 		//this.rate = 0;

@@ -12,5 +12,7 @@ import com.bricolage.demo.entity.Postule;
 @Repository
 public interface PostuleRepository extends JpaRepository<Postule, Long> {
 
-	
+	public final static String bricoleurs_pre_offre ="Select b from Bricoleur b Join b.postules p Where p.offre = :id";
+	@Query(bricoleurs_pre_offre)
+	public List<Bricoleur> findBricoleursById(@Param("id") Long id);
 }
