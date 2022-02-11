@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bricolage.demo.dto.OffreRequest;
+import com.bricolage.demo.entity.Bricoleur;
 import com.bricolage.demo.entity.Offre;
 import com.bricolage.demo.entity.User;
 import com.bricolage.demo.repositories.OffreRepository;
@@ -52,6 +53,14 @@ public class OffreDaoImp  implements OffreDao{
 	public List<Offre> listOffrePourUser(Long id_user) {
 		User user = userRepo.findById(id_user).orElse(null);
 		return user.getOffres();
+	}
+
+	@Override
+	public List<Offre> listeOffrePostuleBricoleur(Long id_bricoleur) {
+		// TODO Auto-generated method stub
+		List<Offre> O = offreRepo.findOffreByIdBricoleurs(id_bricoleur);
+		
+		return O;
 	}
 
 }

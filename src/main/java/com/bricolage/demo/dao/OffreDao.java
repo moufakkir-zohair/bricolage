@@ -3,6 +3,7 @@ package com.bricolage.demo.dao;
 import java.util.List;
 
 import com.bricolage.demo.dto.OffreRequest;
+import com.bricolage.demo.entity.Bricoleur;
 import com.bricolage.demo.entity.Offre;
 
 public interface OffreDao {
@@ -11,4 +12,5 @@ public interface OffreDao {
 	public void supprimerOffre(Long id_offre);
 	public List<Offre> listOffrePourBricoleur(String jobs);
 	public List<Offre> listOffrePourUser(Long id_user);
+	public List<Offre> listeOffrePostuleBricoleur(Long id_bricoleur);
 }

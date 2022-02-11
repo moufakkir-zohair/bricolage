@@ -46,4 +46,10 @@ public class OffreController {
 		List<Offre> offres = offreDao.listOffrePourUser(id_user);
 		return new ResponseEntity<List<Offre>>(offres , HttpStatus.OK);
 	}
+	
+	@GetMapping("/listOffrePostBricol/{id_bricoleur}")
+	public ResponseEntity<List<Offre>> listOffrePoustuleBricoleur(@PathVariable("id_bricoleur") Long id_bricoleur){
+		List<Offre> offres = offreDao.listeOffrePostuleBricoleur(id_bricoleur);
+		return new ResponseEntity<List<Offre>>(offres , HttpStatus.OK);
+	}
 }
