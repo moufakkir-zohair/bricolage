@@ -44,20 +44,26 @@ public class PostuleDaoImp implements PostuleDao {
 		
 	}
 
-	@Override
-	public List<Bricoleur> listPostuleBPourOffre(Long id_offre) {
-		// TODO Auto-generated method stub
-		Offre offre = offreRepo.findById(id_offre).orElse(null);
-		return null;
-	}
 
-	@Override
+	/*@Override
 	public List<Postule> listBricoleurPostulePourOffre(Long id_bricoleur) {
 		// TODO Auto-generated method stub
 		List<Postule> l = postuleRepo.findAll();
 		List<Postule> tmp = null;
 		for(Postule p: l) {
 			if(p.getBricoleur().getId() == id_bricoleur) tmp.add(p);
+		}
+		return tmp;
+	}*/
+
+	@Override
+	public List<Bricoleur> listBricoleurPostuleOffre(Long id_offre) {
+		// TODO Auto-generated method stub
+		Offre offre = offreRepo.findById(id_offre).orElse(null);
+		List<Postule> p = postuleRepo.findAll();
+		List<Bricoleur> tmp = null;
+		for(Postule l: p) {
+			if(l.getOffre().getId() == id_offre) tmp.add(l.getBricoleur());
 		}
 		return tmp;
 	}

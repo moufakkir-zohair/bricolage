@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.bricolage.demo.dao.PostuleDao;
 import com.bricolage.demo.dto.PostuleRequest;
+import com.bricolage.demo.entity.Bricoleur;
 import com.bricolage.demo.entity.Postule;
 
 
@@ -36,6 +37,13 @@ public class PostuleController {
 	public ResponseEntity<List<Postule>> listPostulePourOffre(@PathVariable("id")  Long id_offre){
 		List<Postule> postules = postuleDao.listPostulePourOffre(id_offre);
 		return new ResponseEntity<List<Postule>>(postules, HttpStatus.OK);
+	}
+	
+	
+	@GetMapping("/listBricoleurPourOffre/{id}")
+	public ResponseEntity<List<Bricoleur>> listBricoleurPostuleOffre(@PathVariable("id")  Long id_offre){
+		List<Bricoleur> bricoleurs = postuleDao.listBricoleurPostuleOffre(id_offre);
+		return new ResponseEntity<List<Bricoleur>>(bricoleurs, HttpStatus.OK);
 	}
 	
 }
